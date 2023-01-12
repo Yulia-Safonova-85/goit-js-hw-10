@@ -25,7 +25,7 @@ function onInputMessage(evt) {
             .then(data => {
         selectCountry(data);
       })
-            .catch(err => {Notify.failure('Oops, there is no country with that name');})
+            .catch(err => {Notify.failure('Oops, there is no country with that name')})
     }
 }
 
@@ -55,6 +55,7 @@ function createMarkup(data) {
     list.innerHTML = markup.join('');
     list.style.listStyle = 'none';
     list.style.padding = '10px';
+    list.style.margin = '0';
 }
 
 function createFullMarkup(data) {
@@ -76,4 +77,5 @@ ${el.name.official}
     countryInfo.innerHTML = markup.join('');
     countryInfo.style.listStyle = 'none';
     countryInfo.style.padding = '10px';
+    countryInfo.style.margin = '0';
 }
