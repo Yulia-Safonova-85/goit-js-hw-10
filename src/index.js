@@ -25,8 +25,11 @@ function onInputMessage(evt) {
             .then(data => {
         selectCountry(data);
       })
-            .catch(err => {Notify.failure('Oops, there is no country with that name')})
+            .catch(err => { Notify.failure('Oops, there is no country with that name') })
     }
+    list.innerHTML = '';
+    countryInfo.innerHTML = ''; 
+
 }
 
 function selectCountry(arr) {
@@ -36,12 +39,13 @@ function selectCountry(arr) {
         return createFullMarkup(arr);
     }
     if (arr.length >= 2 && arr.length <= 10) {
-        countryInfo.innerHTML = '';
+        list.innerHTML = '';
         return createMarkup(arr);
     }
     return Notify.info(
         'Too many matches found. Please enter a more specific name.'
     );
+
 }
 
 
