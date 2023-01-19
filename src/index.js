@@ -39,7 +39,7 @@ function selectCountry(arr) {
         return createFullMarkup(arr);
     }
     if (arr.length >= 2 && arr.length <= 10) {
-        list.innerHTML = '';
+        countryInfo.innerHTML = '';
         return createMarkup(arr);
     }
     return Notify.info(
