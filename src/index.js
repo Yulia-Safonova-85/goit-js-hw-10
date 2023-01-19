@@ -27,15 +27,16 @@ function onInputMessage(evt) {
       })
             .catch(err => { Notify.failure('Oops, there is no country with that name') })
     }
+
     list.innerHTML = '';
     countryInfo.innerHTML = ''; 
-
 }
 
 function selectCountry(arr) {
     if (arr.length === 1) {
 
         list.innerHTML = '';
+        countryInfo.innerHTML = '';
         return createFullMarkup(arr);
     }
     if (arr.length >= 2 && arr.length <= 10) {
